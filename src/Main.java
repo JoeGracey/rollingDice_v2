@@ -3,9 +3,16 @@ public class Main {
     public static void main(String[] args) {
         RollTheDice rollTheDice = new RollTheDice(); // Create the RollTheDice Object
 
-        rollTheDice.rolling();
-        rollTheDice.storingNumberRolled();
-        rollTheDice.table();
+        int count = 1;
+        if (count <= 20) {
+            do {
+                rollTheDice.rolling();
+                rollTheDice.storingNumberRolled();
+            } while (count <= 20); {
+                count++;
+            }
+            rollTheDice.table();
+        }
     }
 
     public static class RollTheDice {
@@ -20,12 +27,9 @@ public class Main {
 
         // Adds one to the index each time a number is rolled
         public void storingNumberRolled() {
-            for (int count = 1; count <= 20; count++) {
-                ++diceNumberFrequency[d20Dice];
-                System.out.println(d20Dice + " has been rolled " + diceNumberFrequency[d20Dice]
-                 + " times");
-                rolling();
-            }
+            ++diceNumberFrequency[d20Dice];
+            System.out.println(d20Dice + " has been rolled " + diceNumberFrequency[d20Dice] + " times");
+            rolling();
         }
 
         // Table showing each number rolled and how many times it was rolled
