@@ -32,6 +32,7 @@ public class Main {
         // Table showing each number rolled and how many times it was rolled
         public void table() {
             int index = 1;
+            System.out.println();
             System.out.println("Number\tTimes Rolled");
             for (int count = 1; count < diceNumberFrequency.length; count++) {
                 System.out.println(index++ + "\t\t" + diceNumberFrequency[count]);
